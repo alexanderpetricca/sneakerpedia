@@ -1,0 +1,28 @@
+    services:
+        web:
+            container_name: sneakerpedia
+            build: .
+            command: python manage.py runserver 0.0.0.0:8000
+            volumes:
+                # Mount the entire project root into /app
+                - ./:/app
+            ports:
+                - "8000:8000"
+            env_file:
+                - ./.env        
+            depends_on:
+                - db
+
+        db:
+            container_name: sneakerpedia-db
+            image: postgres:16
+            # Use a named volume to persist database data
+            volumes:
+                - postgres_data:/var/lib/postgresql/data
+            # Load credentials from the .env file for security
+            env_file:
+                - ./.env
+
+        # Define the named volume
+    volumes:
+        postgres_data:
