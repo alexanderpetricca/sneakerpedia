@@ -51,7 +51,7 @@ class CustomUserModelTests(TestCase):
         self.assertTrue(self.admin_user.is_superuser)
 
     
-    def test_string_representation(self):
+    def test_string_method(self):
         """
         Test user model string method.
         """

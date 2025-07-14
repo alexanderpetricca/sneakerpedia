@@ -5,19 +5,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>New Project | {% block title %}{% endblock %}</title>
+        <title>SneakerPedia | {% block title %}{% endblock %}</title>
         <!-- Compiled Tailwind CSS -->
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
         <!-- Alpine JS -->
         <script src="//unpkg.com/alpinejs" defer></script>
     </head>
     <body class="h-screen flex flex-col">
-        <nav id="main-nav" class="bg-gray-100 px-4 py-3 h-12 flex flex-row justify-between items-center">
-            <a href="#" id="header-wrapper" class="flex items-center">
-                <h1 class="text-xl text-gray-700">
-                    Project
-                </h1>
-            </a>
+        <nav id="main-nav" class="bg-white px-4 h-30 flex flex-row justify-between items-center">
             <div id="nav-controls" class="flex flex-row items-center">
                 <div id="menu-wrapper" class="relative" x-data="{ open: false }" @mouseleave="open = false">
                     <button id="menu-btn" class="text-gray-700 hover:text-blue-500 hover:cursor-pointer" @mouseover="open = true">

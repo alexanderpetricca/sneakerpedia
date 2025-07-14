@@ -1,0 +1,466 @@
+[
+    {
+        "brand_name": "Adidas",
+        "name": "ozweego",
+        "primary_image": "adidas-ozweego.jpg",
+        "summary": "The Adidas Ozweego fuses '90s running heritage with futuristic design and comfort.",
+        "designer": "Adi Dassler",
+        "year_released": 1996
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air huarache",
+        "primary_image": "nike-air-huarache.jpg",
+        "summary": "The Nike Air Huarache is known for its neoprene fit and minimalist exoskeleton support.",
+        "designer": "Tinker Hatfield",
+        "year_released": 1991
+    },
+    {
+        "brand_name": "Nike",
+        "name": "dunk high",
+        "primary_image": "nike-dunk-high.jpg",
+        "summary": "Originally a basketball shoe, the Nike Dunk High became a skate and streetwear icon.",
+        "designer": "Peter Moore",
+        "year_released": 1985
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "996",
+        "primary_image": "newbalance-996.jpg",
+        "summary": "The New Balance 996 offers sleek design with ENCAP cushioning for running and casual wear.",
+        "designer": "Steven Smith",
+        "year_released": 1988
+    },
+    {
+        "brand_name": "Nike",
+        "name": "am95 ultra",
+        "primary_image": "nike-am95-ultra.jpg",
+        "summary": "A lighter, modern update of the Air Max 95 with streamlined materials.",
+        "designer": "Sergio Lozano",
+        "year_released": 2015
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max pulse",
+        "primary_image": "nike-air-max-pulse.jpg",
+        "summary": "Combines bold modern aesthetics with Nike's signature Air cushioning.",
+        "designer": "Nike Team",
+        "year_released": 2023
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "gazelle indoor",
+        "primary_image": "adidas-gazelle-indoor.jpg",
+        "summary": "A revival of the classic Gazelle with an indoor gum sole.",
+        "designer": "Adi Dassler",
+        "year_released": 1979
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air jordan 3",
+        "primary_image": "nike-air-jordan-3.jpg",
+        "summary": "First Jordan with visible Air cushioning and iconic elephant print.",
+        "designer": "Tinker Hatfield",
+        "year_released": 1988
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "as520",
+        "primary_image": "adidas-as520.jpg",
+        "summary": "Runner from 1976 with an athletic heritage, embodying nostalgia.",
+        "designer": "Gary Aspden",
+        "year_released": 1981
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max 97",
+        "primary_image": "nike-am97.jpg",
+        "summary": "Inspired by bullet trains, the Air Max 97 features a full-length visible Air unit.",
+        "designer": "Christian Tresser",
+        "year_released": 1997
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "991",
+        "primary_image": "newbalance-991.jpg",
+        "summary": "Part of New Balance's 99X series, the 991 is known for its comfort and durability.",
+        "designer": "Steven Smith",
+        "year_released": 2001
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air jordan 1 high",
+        "primary_image": "nike-aj1-high.jpg",
+        "summary": "The Air Jordan 1 High started the Jordan legacy with its bold design.",
+        "designer": "Peter Moore",
+        "year_released": 1985
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "superstar",
+        "primary_image": "adidas-superstar.jpg",
+        "summary": "The Adidas Superstar is famed for its shell toe and basketball roots.",
+        "designer": "Adi Dassler",
+        "year_released": 1969
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air jordan 1 low",
+        "primary_image": "nike-aj-1-low.jpg",
+        "summary": "A low-top version of the Air Jordan 1 for casual style and comfort.",
+        "designer": "Peter Moore",
+        "year_released": 1985
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max 95",
+        "primary_image": "nike-am95.jpg",
+        "summary": "Inspired by human anatomy, the Air Max 95 features layered panels and Air cushioning.",
+        "designer": "Sergio Lozano",
+        "year_released": 1995
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air force 1 07",
+        "primary_image": "nike-air-force-1-07.jpg",
+        "summary": "Iconic style meets comfort: Nike Air Force 07 sneaker boasts timeless design and cushioned support.",
+        "designer": "Bruce Kilgore",
+        "year_released": 1982
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "miuk",
+        "primary_image": "newbalance-miuk.jpg",
+        "summary": "Made in UK collection, focusing on premium craftsmanship and materials.",
+        "designer": "New Balance UK Team",
+        "year_released": 2019
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air force 1 shadow",
+        "primary_image": "nike-af1-shadow.jpg",
+        "summary": "A playful twist on the Air Force 1 with layered details.",
+        "designer": "Nike Team",
+        "year_released": 2019
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air jordan 1 low",
+        "primary_image": "nike-air-jordan1-low.jpg",
+        "summary": "A low-top version of the Air Jordan 1 for casual style and comfort.",
+        "designer": "Peter Moore",
+        "year_released": 1985
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max 270",
+        "primary_image": "nike-am270.jpg",
+        "summary": "The Air Max 270 features the tallest Air unit at launch for lifestyle wear.",
+        "designer": "Nike Team",
+        "year_released": 2018
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "la",
+        "primary_image": "adidas-la.jpg",
+        "summary": "Created for the 1984 Los Angeles Olympics, featuring a distinctive peg cushioning system.",
+        "designer": "Adi Dassler",
+        "year_released": 1984
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "london",
+        "primary_image": "adidas-london.jpg",
+        "summary": "Part of Adidas' city series, the London is a terrace classic with sleek lines.",
+        "designer": "Adi Dassler",
+        "year_released": 1970
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air jordan 1 elevate low",
+        "primary_image": "nike-aj1-elevate-low.jpg",
+        "summary": "A platform version of the Jordan 1 Low for elevated style.",
+        "designer": "Nike Team",
+        "year_released": 2022
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "zx 750",
+        "primary_image": "adidas-zx-750.jpg",
+        "summary": "Part of the ZX series, known for stability and running performance.",
+        "designer": "Jacques Chassaing",
+        "year_released": 1984
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "2002",
+        "primary_image": "newbalance-2002.jpg",
+        "summary": "The New Balance 2002 offers luxury design with ABZORB cushioning.",
+        "designer": "Yue Wu",
+        "year_released": 2010
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "1906",
+        "primary_image": "newbalance-1906.jpg",
+        "summary": "Named after New Balance's founding year, with high-performance features.",
+        "designer": "New Balance Team",
+        "year_released": 2009
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "samba og",
+        "primary_image": "adidas-samba-og.jpg",
+        "summary": "Originally an indoor soccer shoe, now a streetwear staple.",
+        "designer": "Adi Dassler",
+        "year_released": 1950
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "650",
+        "primary_image": "newbalance-650.jpg",
+        "summary": "High-top basketball shoe, revived as a lifestyle silhouette.",
+        "designer": "Steven Smith",
+        "year_released": 1989
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max terrascape",
+        "primary_image": "nike-air-max-terrascape.jpg",
+        "summary": "Sustainable Air Max with recycled materials and rugged outsole.",
+        "designer": "Nike Team",
+        "year_released": 2021
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "990 v3",
+        "primary_image": "newbalance-990-v3.jpg",
+        "summary": "An update to the classic 990 with modern cushioning and support.",
+        "designer": "New Balance Team",
+        "year_released": 2012
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "530",
+        "primary_image": "newbalance-530.jpg",
+        "summary": "Classic '90s running shoe reissued for lifestyle wear.",
+        "designer": "New Balance Team",
+        "year_released": 1992
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air more uptempo",
+        "primary_image": "nike-air-more-uptempo.jpg",
+        "summary": "Known for bold 'AIR' branding and basketball performance.",
+        "designer": "Wilson Smith III",
+        "year_released": 1996
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "ohandball spezial",
+        "primary_image": "adidas-ohandball-spezial.jpg",
+        "summary": "Indoor handball shoe turned terrace classic.",
+        "designer": "Adi Dassler",
+        "year_released": 1979
+    },
+    {
+        "brand_name": "Nike",
+        "name": "vapormax plus",
+        "primary_image": "nike-vapormax-plus.jpg",
+        "summary": "Combines VaporMax sole with Air Max Plus upper.",
+        "designer": "Nike Team",
+        "year_released": 2018
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "990 v2",
+        "primary_image": "newbalance-990-v2.jpg",
+        "summary": "Refinement of the 990 series with sleeker design.",
+        "designer": "New Balance Team",
+        "year_released": 1998
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "860",
+        "primary_image": "newbalance-860.jpg",
+        "summary": "Running shoe combining stability and cushioning.",
+        "designer": "New Balance Team",
+        "year_released": 2011
+    },
+    {
+        "brand_name": "Nike",
+        "name": "dunk low",
+        "primary_image": "nike-dunk-low.jpg",
+        "summary": "A low-cut version of the Dunk for skate and streetwear.",
+        "designer": "Peter Moore",
+        "year_released": 1985
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "327",
+        "primary_image": "newbalance-327.jpg",
+        "summary": "A modern reinterpretation of '70s runners with bold sole design.",
+        "designer": "Charlotte Lee",
+        "year_released": 2020
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "990 v6",
+        "primary_image": "newbalance-990-v6.jpg",
+        "summary": "Latest 990 version with FuelCell foam for modern comfort.",
+        "designer": "New Balance Team",
+        "year_released": 2022
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "jeans",
+        "primary_image": "adidas-jeans.jpg",
+        "summary": "Made for casual wear with denim-friendly styling.",
+        "designer": "Adi Dassler",
+        "year_released": 1979
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "rivalry low",
+        "primary_image": "adidas-rivalry-low.jpg",
+        "summary": "Low-top basketball classic now a streetwear favorite.",
+        "designer": "Jacques Chassaing",
+        "year_released": 1986
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "zx flux",
+        "primary_image": "adidas-zx-flux.jpg",
+        "summary": "Simplified ZX model with a sleek upper for casual wear.",
+        "designer": "Jacques Chassaing",
+        "year_released": 2014
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air force 1 low",
+        "primary_image": "nike-air-force-1-low.jpg",
+        "summary": "The Nike Air Force 1 Low is an iconic basketball-inspired sneaker introduced in 1982. Designed by Bruce Kilgore, it became a cultural phenomenon and remains one of Nike's most popular shoe models.",
+        "designer": "Bruce Kilgore",
+        "year_released": 1982
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max 1",
+        "primary_image": "nike-am1.jpg",
+        "summary": "The first Air Max with visible cushioning, changed sneaker design forever.",
+        "designer": "Tinker Hatfield",
+        "year_released": 1987
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "990 v5",
+        "primary_image": "newbalance-990-v5.jpg",
+        "summary": "Fifth iteration of the 990, blending stability with premium materials.",
+        "designer": "New Balance Team",
+        "year_released": 2019
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "990 v4",
+        "primary_image": "newbalance-990-v4.jpg",
+        "summary": "Combines classic style with modern performance updates.",
+        "designer": "New Balance Team",
+        "year_released": 2016
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "550",
+        "primary_image": "newbalance-550.jpg",
+        "summary": "Basketball low-top brought back as a retro staple.",
+        "designer": "Steven Smith",
+        "year_released": 1989
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max tw",
+        "primary_image": "nike-amtw.jpg",
+        "summary": "Modern Air Max silhouette inspired by '90s running.",
+        "designer": "Nike Team",
+        "year_released": 2022
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max plus",
+        "primary_image": "nike-am-plus.jpg",
+        "summary": "Known for Tuned Air and palm tree-inspired overlays.",
+        "designer": "Sean McDowell",
+        "year_released": 1998
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "malmo",
+        "primary_image": "adidas-malmo.jpg",
+        "summary": "Part of the Adidas city series, representing Malm\u00f6, Sweden.",
+        "designer": "Adi Dassler",
+        "year_released": 1972
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air jordan 3",
+        "primary_image": "nike-aj3.jpg",
+        "summary": "First Jordan with visible Air cushioning and iconic elephant print.",
+        "designer": "Tinker Hatfield",
+        "year_released": 1988
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air force 1 low 07",
+        "primary_image": "nike-af1-low-07.jpg",
+        "summary": "A contemporary sneaker blending modern style with everyday comfort.",
+        "designer": "Nike Team",
+        "year_released": 2020
+    },
+    {
+        "brand_name": "Nike",
+        "name": "p-6000",
+        "primary_image": "nike-p-6000.jpg",
+        "summary": "Mesh-heavy design inspired by 2000s Pegasus models.",
+        "designer": "Nike Team",
+        "year_released": 2019
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air max terrascape 90",
+        "primary_image": "nike-am-terrascape-90.jpg",
+        "summary": "Eco-friendly version of the Air Max 90 with recycled materials.",
+        "designer": "Nike Team",
+        "year_released": 2021
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "ozmorph",
+        "primary_image": "adidas-ozmorph.jpg",
+        "summary": "Futuristic Adidas runner blending style and performance.",
+        "designer": "Nike Team",
+        "year_released": 2023
+    },
+    {
+        "brand_name": "Adidas",
+        "name": "gazelle",
+        "primary_image": "adidas-gazelle.jpg",
+        "summary": "An Adidas staple, originally designed for training and indoor sports.",
+        "designer": "Adi Dassler",
+        "year_released": 1966
+    },
+    {
+        "brand_name": "New Balance",
+        "name": "9060",
+        "primary_image": "newbalance-9060.jpg",
+        "summary": "Futuristic design blending '99X' series heritage with bold new proportions.",
+        "designer": "Yue Wu",
+        "year_released": 2022
+    },
+    {
+        "brand_name": "Nike",
+        "name": "air jordan 1 mid",
+        "primary_image": "nike-aj1-mid.jpg",
+        "summary": "A mid-top version of the classic Air Jordan 1.",
+        "designer": "Peter Moore",
+        "year_released": 2001
+    }
+]

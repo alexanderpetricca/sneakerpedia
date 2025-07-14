@@ -1,0 +1,35 @@
+{% load static %}
+{% load template_helpers %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sneakerpedia | {% block title %}{% endblock %}</title>
+        <!-- Tailwind CSS -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- Alpine JS -->
+        <script src="//unpkg.com/alpinejs" defer></script>
+    </head>
+    <body class="h-screen flex flex-col text-sm">
+        <nav id="main-nav" class="bg-white px-4 lg:px-30 py-5 flex flex-row justify-between lg:justify-end items-center absolute w-full top-0">
+            <div class="input-wrapper">
+                <label for="nav-search-input" class="hidden" aria-hidden="true">Search</label>
+                <input id="nav-search-input" type="text" placeholder="search" name="search" class="bg-stone-100 rounded-full py-2 px-4 lg:me-5">
+            </div>
+            <div id="menu-wrapper" class="relative" x-data="{ open: false }">
+                <button id="menu-btn" class="text-gray-700 hover:text-blue-500 hover:cursor-pointer" @mouseover="open = true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" height="52px" width="52px" fill="currentColor">
+                        <path d="M200-393.85v-30.77h560v30.77H200Zm0-141.53v-30.77h560v30.77H200Z"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <main id="main-content" class="h-full">
+            {% block content %}
+            {% endblock content %}
+        </main>
+        {% block scripts %}
+        {% endblock scripts %}
+    </body>    
+</html>
