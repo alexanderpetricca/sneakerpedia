@@ -21,7 +21,7 @@ def run():
         print("Seeding cancelled.")
         return
 
-    # --- Setup Paths ---
+    # Setup Paths
     script_dir = Path(__file__).parent
     brand_data_path = script_dir / "brands.json"
     sneaker_data_path = script_dir / "sneakers.json"
@@ -31,12 +31,12 @@ def run():
         print("Ensure brands.json and sneakers.json exist in the scripts directory.")
         return
 
-    # --- Clear existing objects ---
+    # Clear existing objects
     print("Deleting existing data...")
     Sneaker.objects.all().delete()
     Brand.objects.all().delete()
 
-    # --- Load and create brand data ---
+    # Load and create brand data
     print("Creating brands...")
     with open(brand_data_path, "r", encoding="utf-8") as f:
         brand_data = json.load(f)
@@ -44,11 +44,11 @@ def run():
             Brand.objects.create(**brand_item)
     print(f"{Brand.objects.count()} brands created.")
 
-    # --- Load sneaker data ---
+    # Load sneaker data
     with open(sneaker_data_path, "r", encoding="utf-8") as f:
         sneaker_data = json.load(f)
 
-    # --- Create Sneaker objects (pass 1) ---
+    # Create Sneaker Objects
     print("Creating sneakers...")
     sneaker_objects_map = {}
     for sneaker_item in sneaker_data:
@@ -74,7 +74,6 @@ def run():
             print(f"  > Looking for image: {image_filename}")
             print(f"  > Expecting it at full path: {image_path.resolve()}")
 
-
             if image_path.exists():
                 with open(image_path, "rb") as img_f:
                     new_sneaker.primary_image.save(image_filename, File(img_f), save=True)
@@ -87,7 +86,7 @@ def run():
         }
     print(f"{Sneaker.objects.count()} sneakers created.")
 
-    # --- Add Many-to-Many relationships (pass 2) ---
+    # Add Many-to-Many relationships
     print("Adding relationships...")
     for name, data in sneaker_objects_map.items():
         sneaker_instance = data["instance"]

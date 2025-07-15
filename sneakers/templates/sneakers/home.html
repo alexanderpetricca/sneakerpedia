@@ -2,29 +2,18 @@
 {% block title %}Home{% endblock title %}
 {% load static %}
 {% load template_helpers %}
+
 {% block content %}
 {% for brand in brands %}
-<div class="h-dvh w-full bg-green p-10 lg:py-10 lg:px-20 mb-5 flex justify-end items-end text-[75px] lg:text-[200px] font-bold leading-[75px] lg:leading-[200px]">
+<div class="h-[calc(100dvh-97px)] w-full bg-custom-green p-10 lg:py-10 lg:px-20 mb-5 flex justify-end items-end text-[75px] lg:text-[200px] font-bold leading-[75px] lg:leading-[200px]">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" class="rotate-270 me-3 h-[75px] lg:h-[200px]">
+        <path d="M668-126v-411H367l122 122-89 89-274-274 274-274 89 89-122 122h427v537H668Z"/>
+    </svg>    
     {{ brand }}
 </div>
-<div id="brand-wrapper-{{ brand.id }}" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-5">
+<div id="brand-wrapper-{{ brand.id }}" class="bg-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-5">
     {% for sneaker in brand.sneakers %}
-    <div id="sneaker-wrapper-{{ sneaker.id }}" class="bg-gray">
-        <a href="#">
-            <img src="{{ sneaker.primary_image.url }}" alt="Photograph of {{ brand }} {{ sneaker.name }}">
-            <div class="p-4">
-                <p class="mb-2">{{ brand.name }}</p>
-                <div class="flex justify-between items-center">
-                    <p class="text-3xl font-bold uppercase">{{ sneaker.name }}</p>
-                    <a href="#" class="bg-green p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" height="30px" width="30px" fill="currentColor">
-                            <path d="M246.67-244 200-290.67l402.67-402.66H236V-760h480v480h-66.67v-366.67L246.67-244Z"/>
-                        </svg>                
-                    </a>
-                </div>
-            </div>
-        </a>
-    </div>
+    {% include 'sneakers/partials/sneaker.html' %}
     {% endfor %}
 </div>
 {% endfor %}

@@ -145,14 +145,6 @@
     },
     {
         "brand_name": "Nike",
-        "name": "air jordan 1 low",
-        "primary_image": "nike-air-jordan1-low.jpg",
-        "summary": "A low-top version of the Air Jordan 1 for casual style and comfort.",
-        "designer": "Peter Moore",
-        "year_released": 1985
-    },
-    {
-        "brand_name": "Nike",
         "name": "air max 270",
         "primary_image": "nike-am270.jpg",
         "summary": "The Air Max 270 features the tallest Air unit at launch for lifestyle wear.",
@@ -257,7 +249,7 @@
     },
     {
         "brand_name": "Adidas",
-        "name": "ohandball spezial",
+        "name": "handball spezial",
         "primary_image": "adidas-ohandball-spezial.jpg",
         "summary": "Indoor handball shoe turned terrace classic.",
         "designer": "Adi Dassler",
@@ -401,14 +393,6 @@
     },
     {
         "brand_name": "Nike",
-        "name": "air jordan 3",
-        "primary_image": "nike-aj3.jpg",
-        "summary": "First Jordan with visible Air cushioning and iconic elephant print.",
-        "designer": "Tinker Hatfield",
-        "year_released": 1988
-    },
-    {
-        "brand_name": "Nike",
         "name": "air force 1 low 07",
         "primary_image": "nike-af1-low-07.jpg",
         "summary": "A contemporary sneaker blending modern style with everyday comfort.",
@@ -422,14 +406,6 @@
         "summary": "Mesh-heavy design inspired by 2000s Pegasus models.",
         "designer": "Nike Team",
         "year_released": 2019
-    },
-    {
-        "brand_name": "Nike",
-        "name": "air max terrascape 90",
-        "primary_image": "nike-am-terrascape-90.jpg",
-        "summary": "Eco-friendly version of the Air Max 90 with recycled materials.",
-        "designer": "Nike Team",
-        "year_released": 2021
     },
     {
         "brand_name": "Adidas",

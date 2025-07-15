@@ -2,20 +2,7 @@
 
 ## Overview
 
-Basic boiler plate for a dockerised Django application, with the following packages, libraries, and configuration:
-
-- Docker
-- **Django 5.1**, running on **Python 3.11.9** .
-- Postgres Database, connected via psycopg, running **Postgres 16**.
-- Custom user model, with username disabled, email set to required and basic tests.
-- Django AllAuth, with urls and views manual added to easily disable / configure.
-- Django Debug Toolbar
-- Django Extensions
-- **Tailwind CSS 4.0.3** (NPM Package)
-- **Alpine JS 3.14.8** (CDN)
-- Base Templates for authorised and non-authorised views.
-- Core app, containing custom tags and a field_wrapper tag for form fields.
-- Settings configured for environment variables, template directories, static directories.
+!! Project overview
 
 
 ## Local Development Setup
@@ -49,6 +36,10 @@ Basic boiler plate for a dockerised Django application, with the following packa
     $ docker-compose exec web python manage.py createsuperuser
     ```
 7. Navigate to http://127.0.0.1:8000/ in your browser.
+
+## Seed Data
+!! Information on how to download and place the seed images, and running the 
+seed data script. 
 
 ## Tests
 

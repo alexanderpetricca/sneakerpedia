@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     # Third Party
     'allauth',
     'allauth.account',  
-    'debug_toolbar',
     'django_extensions',
+    'django_filters',
+    'debug_toolbar',
 
     # Local
     'accounts.apps.AccountsConfig',

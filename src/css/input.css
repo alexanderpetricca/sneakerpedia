@@ -29,12 +29,7 @@
     }
 }
 
-@layer utilities {
-    .bg-gray {
-        background-color: #ededed;
-    }
-
-    .bg-green {
-        background-color: #cdfd00;
-    }
+@theme {
+    --color-custom-green: #cdfd00;
+    --color-custom-gray: #ededed;
 }

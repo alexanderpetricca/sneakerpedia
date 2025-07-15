@@ -1,0 +1,49 @@
+{% extends '_base.html' %}
+{% block title %}{{ sneaker.brand.name }} {{ sneaker.name|upper }} {% endblock title %}
+{% load static %}
+{% load template_helpers %}
+{% block content %}
+<div id="detail-header-block" class="lg:sticky lg:top-0 lg:h-[calc(100dvh-97px)] w-full flex flex-col lg:flex-row">
+    <div id="sneaker-info-panel" class="w-full xl:w-[50%] h-[calc(100dvh-97px)] xl:h-full bg-custom-green p-5 xl:p-10">
+        <ul id="breadcrumb" class="flex gap-3">
+            <li class="hover:underline transition">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li>•</li>
+            <li class="hover:underline transition">
+                <a href="{% url 'query' %}?brand={{ sneaker.brand.id }}">{{ sneaker.brand }}</a>
+            </li>
+            <li>•</li>            
+            <li class="uppercase">
+                {{ sneaker.name }}
+            </li>                                
+        </ul>
+        <div class="h-full flex flex-grow flex-col justify-center xl:justify-end">
+            <div class="font-bold text-[75px] xl:text-[130px] leading-[75px] xl:leading-[120px] align-middle md:mt-30 xl:mb-[20%]">
+                {{ sneaker.brand }} <span class="uppercase">{{ sneaker.name }}</span>
+            </div>
+        </div>
+    </div>
+    <div id="sneaker-image-panel" class="lg:sticky lg:top-0 w-full xl:w-[50%] h-[calc(100dvh-97px)] xl:h-full bg-custom-gray">
+        <img src="{{ sneaker.primary_image.url }}" alt="Photograph of {{ sneaker.brand }} {{ sneaker.name }}" class="h-full w-full object-scale-down xl:object-cover xl:object-bottom relative">
+        <div id="info-summary" class="flex gap-3 absolute bottom-20 right-20 text-3xl">
+            <div id="designer" class="border-2 p-5 hover:cursor-pointer hover:bg-black hover:text-white transition">
+                <a href="{% url 'query' %}?designer={{ sneaker.designer }}">
+                    {{ sneaker.designer }}
+                </a>
+            </div>
+            <div id="year-released" class="border-2 rounded-full p-5 hover:cursor-pointer hover:bg-black hover:text-white transition">
+                <a href="{% url 'query' %}?year_released={{ sneaker.year_released }}">
+                    {{ sneaker.year_released }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="description-block" class="lg:sticky lg:top-0 min-h-dvh relative bg-black text-white p-10 text-[70px] xl:text-[140px] leading-[70px] xl:leading-[140px] xl:p-20">
+    {{ sneaker.summary }}
+</div>
+<div id="about-brand-block" class="min-h-dvh relative bg-custom-green text-black font-bold p-10 text-[30px] xl:text-[70px] leading-[40px] xl:leading-[80px] xl:p-20">
+    {{ sneaker.brand.description }}
+</div>
+{% endblock content %}
