@@ -24,7 +24,7 @@ class Brand(models.Model):
     year_founded = models.PositiveIntegerField(
         validators=[
             MinValueValidator(1900),
-            MaxValueValidator(get_current_year)
+            MaxValueValidator(get_current_year())
         ],
         null=True,
         blank=True,
@@ -79,13 +79,11 @@ class Sneaker(models.Model):
     year_released = models.PositiveIntegerField(
         validators=[
             MinValueValidator(1900),
-            MaxValueValidator(get_current_year)
+            MaxValueValidator(get_current_year())
         ]
     )
 
     related_sneakers = models.ManyToManyField('self', blank=True)
-    # TODO Tags
-
 
     primary_image = models.ImageField(
         upload_to=_generate_file_path,

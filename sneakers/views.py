@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Prefetch
+from django.views.decorators.cache import cache_page
 
 from sneakers.models import Brand, Sneaker
 from sneakers.filters import SneakerFilter
 from sneakers.utils import get_active_filters
 
 
+@cache_page(60 * 60)
 def home_page_view(request):
     """
     Fetches brands and their associated sneakers, grouped and sorted.

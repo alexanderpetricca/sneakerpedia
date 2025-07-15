@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_filters',
     'debug_toolbar',
+    'drf_spectacular',
+    'rest_framework',
 
     # Local
     'accounts.apps.AccountsConfig',
@@ -191,6 +193,32 @@ if DEBUG == False:
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
     SERVER_EMAIL = env('DEFAULT_FROM_EMAIL')
+
+
+# Django Rest Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '60/minute',
+        'user': '1000/minute',
+    }   
+}
+
+
+# DRF Spectacular
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'SneakerPedia API',
+    'DESCRIPTION': 'Lorem Ipsum',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
 
 
 #Debug Toolbar
