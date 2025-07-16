@@ -44,4 +44,4 @@ node_modules/
 export/
 export.csv
 output.csv
-scripts/seed_images
+scripts/seed_images/
