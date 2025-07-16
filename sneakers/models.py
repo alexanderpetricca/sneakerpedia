@@ -1,12 +1,21 @@
 import uuid, os
+from typing import TYPE_CHECKING
+import logging
 
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils import timezone
 from django.utils.text import slugify
+from django.contrib.auth import get_user_model
 
 from core.utils import get_current_year
 from sneakers.validators import validate_filetype, validate_filesize
+
+
+logger = logging.getLogger('general')
+
+if TYPE_CHECKING:
+    from accounts.models import CustomUser
 
 
 class Brand(models.Model):
@@ -66,7 +75,21 @@ class Sneaker(models.Model):
         editable=False,
     )
     created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.ForeignKey(
+        get_user_model(),
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='sneakers_created'
+    )
     updated_at = models.DateTimeField(auto_now=True)
+    last_updated_by = models.ForeignKey(
+        get_user_model(),
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='sneakers_last_updated'
+    )    
     brand = models.ForeignKey(
         Brand,
         on_delete=models.SET_NULL, 
@@ -92,6 +115,16 @@ class Sneaker(models.Model):
         blank=True
     )
 
+    deleted = models.BooleanField(default=False)
+    deleted_at = models.DateTimeField(null=True, blank=True)
+    deleted_by = models.ForeignKey(
+        get_user_model(),
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='sneakers_deleted'
+    )    
+
 
     class Meta:
         verbose_name = 'Sneaker'
@@ -100,3 +133,20 @@ class Sneaker(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+    def soft_delete(self, deleted_by:'CustomUser') -> tuple[bool, str]:
+        """
+        Soft deletes Sneaker.
+        """
+
+        try:
+            self.deleted = True
+            self.deleted_at = timezone.now()
+            self.deleted_by = deleted_by
+            self.save()
+            return (True, f'Successfully soft-deleted Sneaker {self.id}.')
+        except Exception as e:
+            logger.error(f"Error soft-deleting Sneaker {self.id}: {e}", exc_info=True)
+            return (False, f'An unexpected error occurred when deleting {self.name}.')
+

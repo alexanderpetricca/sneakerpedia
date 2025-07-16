@@ -1,10 +1,10 @@
-{% extends '_auth_base.html' %}
+{% extends '_form_base.html' %}
 {% load field_wrappers %}
 {% block title %}Account Inactive{% endblock title %}
 {% block auth_header %}Account Inactive{% endblock auth_header %}
 {% block content %}
-<div id="form-wrapper" class="w-100 text-center">
-    <p class="text-lg font-bold mb-10">
+<div id="form-wrapper" class="w-full max-w-200 p-5 text-center">
+    <p class="text-lg mb-10">
         This account is currently inactive.
     </p>
     <a href="{% url 'home' %}" class="w-full block border-2 text-1xl p-3 hover:cursor-pointer hover:bg-black hover:text-white transition">

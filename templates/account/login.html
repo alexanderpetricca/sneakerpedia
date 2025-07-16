@@ -1,9 +1,9 @@
-{% extends '_auth_base.html' %}
+{% extends '_form_base.html' %}
 {% load field_wrappers %}
 {% block title %}Sign In{% endblock title %}
 {% block auth_header %}Sign In{% endblock auth_header %}
 {% block content %}
-<div id="form-wrapper" class="w-100 text-center">
+<div id="form-wrapper" class="w-full max-w-200 p-5 text-center">
     <form method="post">
         {% csrf_token %}
         {% include 'core/partials/form_errors.html' %}
