@@ -1,0 +1,23 @@
+{% load static %}
+{% load template_helpers %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sneakerpedia | {% block title %}{% endblock %}</title>
+        <!-- Tailwind CSS -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- Alpine JS -->
+        <script src="{% static 'js/alpine.min.js' %}" defer></script>
+    </head>
+    <body class="h-screen flex flex-col tracking-tight">
+        {% include 'partials/main_nav.html' %}
+        <main id="main-content">
+            {% block content %}
+            {% endblock content %}
+        </main>
+        {% block scripts %}
+        {% endblock scripts %}
+    </body>    
+</html>

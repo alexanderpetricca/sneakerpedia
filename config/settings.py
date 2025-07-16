@@ -39,12 +39,16 @@ INSTALLED_APPS = [
     # Third Party
     'allauth',
     'allauth.account',  
-    'debug_toolbar',
     'django_extensions',
+    'django_filters',
+    'debug_toolbar',
+    'drf_spectacular',
+    'rest_framework',
 
     # Local
     'accounts.apps.AccountsConfig',
     'core.apps.CoreConfig',
+    'sneakers.apps.SneakersConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,7 +143,8 @@ STATICFILES_FINDERS = [
 
 # Media
 MEDIA_URL = '/media/'
-MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -188,6 +193,32 @@ if DEBUG == False:
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
     SERVER_EMAIL = env('DEFAULT_FROM_EMAIL')
+
+
+# Django Rest Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '60/minute',
+        'user': '1000/minute',
+    }   
+}
+
+
+# DRF Spectacular
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'SneakerPedia API',
+    'DESCRIPTION': 'Lorem Ipsum',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
 
 
 #Debug Toolbar

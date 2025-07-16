@@ -12,6 +12,12 @@ def add_class(field, css_class):
     return field
 
 
+@register.filter(name="add_placeholder")
+def add_placeholder(field, placeholder_text):
+    field.field.widget.attrs["placeholder"] = placeholder_text
+    return field
+
+
 @register.inclusion_tag("core/partials/field-wrapper.html")
 def field_wrapper(field):
     """

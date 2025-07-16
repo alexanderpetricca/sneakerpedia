@@ -1,28 +1,22 @@
-{% extends '_unauth_base.html' %}
-{% load static %}
+{% extends '_form_base.html' %}
 {% load field_wrappers %}
-{% block title %}Login{% endblock title %}
+{% block title %}Sign In{% endblock title %}
+{% block auth_header %}Sign In{% endblock auth_header %}
 {% block content %}
-<h2 class="text-2xl mb-8 text-center">
-    Login
-</h2>
-<form method="post">
-    {% csrf_token %}
-    {% include 'account/partials/form-errors.html' %}
-    <div class="mb-5">
-        {% field_wrapper form.login %}
-        {% field_wrapper form.password %}
-        <button type="submit" class="py-2 px-3 my-2 bg-blue-400 text-white rounded w-full hover:bg-blue-500 hover:cursor-pointer">
-            Login
-        </button>
-    </div>
-</form>
-<div>
-    <a href="{% url 'account_reset_password' %}" class="block text-center text-sm mb-2 text-blue-500">
+<div id="form-wrapper" class="w-full max-w-200 p-5 text-center">
+    <form method="post">
+        {% csrf_token %}
+        {% include 'core/partials/form_errors.html' %}
+        <div class="mb-5">
+            {% field_wrapper form.login %}
+            {% field_wrapper form.password %}
+            <button type="submit" class="w-full block border-2 text-1xl p-3 hover:cursor-pointer hover:bg-black hover:text-white transition">
+                Sign In
+            </button>
+        </div>
+    </form>
+    <a href="{% url 'account_reset_password' %}" class="block text-center text-sm mb-2 hover:underline transition">
         Forgotten Password
-    </a>
-    <a href="{% url 'account_signup' %}" class="block text-center text-sm mb-2 text-blue-500">
-        Need an Account?
     </a>
 </div>
 {% endblock content %}

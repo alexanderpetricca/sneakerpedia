@@ -1,7 +1,14 @@
-{% extends '_error_base.html' %}
-{% load static %}
-{% block title %}403{% endblock title %}
+{% extends '_form_base.html' %}
+{% load field_wrappers %}
+{% block title %}Error 403{% endblock title %}
+{% block auth_header %}403{% endblock auth_header %}
 {% block content %}
-<h1>403</h1>
-<p>Permission Denied</p>
+<div id="form-wrapper" class="w-full max-w-200 p-5 text-center">
+    <p class="text-lg mb-10">
+        Permission Denied
+    </p>
+    <a href="{% url 'home' %}" class="w-full block border-2 text-1xl p-3 hover:cursor-pointer hover:bg-black hover:text-white transition">
+        Back
+    </a>    
+</div>
 {% endblock content %}

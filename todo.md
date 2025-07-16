@@ -1,6 +1,0 @@
-- Tailwind
-- Base templates and design
-- Sneaker model
-- List page and filters
-- Authentication pages for favourites, comments?
-- API

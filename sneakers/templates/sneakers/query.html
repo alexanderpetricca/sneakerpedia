@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% block title %}Query{% endblock title %}
+{% load static %}
+{% load template_helpers %}
+{% block content %}
+<div class="font-bold mb-5 px-4 xl:px-10">
+    Displaying {{ sneakers|length }} result{{ sneakers|pluralize }}
+</div>
+<div id="query-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-5">
+    {% for sneaker in sneakers %}
+    {% include 'sneakers/partials/sneaker.html' with brand=sneaker.brand %}
+    {% endfor %}
+</div>
+{% endblock content %}
