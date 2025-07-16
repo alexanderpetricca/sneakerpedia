@@ -1,6 +1,6 @@
 {% load field_wrappers %}
 <div id="{{ field.name }}-field-wrapper" class="mb-3">
-    {{ field|add_class:"block bg-gray-100 w-full p-2 rounded" }}
+    {{ field|add_class:"block w-full bg-stone-100 text-1xl p-3 focus:outline-none focus:ring-2 focus:ring-black transition" }}
     <ul id="login-errors">
         {% for error in field.errors %}
         <li class="text-red-500 text-xs ps-2 mt-2">{{ error }}</li>

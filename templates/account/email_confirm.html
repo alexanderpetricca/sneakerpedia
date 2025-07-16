@@ -1,33 +1,35 @@
-{% extends '_accounts_base.html' %}
-{% load static %}
+{% extends '_auth_base.html' %}
+{% load field_wrappers %}
 {% block title %}Confirm Email{% endblock title %}
+{% block auth_header %}Confirm Email{% endblock auth_header %}
 {% block content %}
-{% if confirmation %}
-    {% if can_confirm %}
-        <h2 class="text-2xl mb-8 text-center">
-            Confirm Email
-        </h2>
-        <p>Click below to confirm your email address.</p>
+<div id="form-wrapper" class="w-100 text-center">
+    {% if confirmation %}
+        {% if can_confirm %}
         <form action="{% url 'account_confirm_email' confirmation.key %}" method="post">
             {% csrf_token %}
-            <button type="submit" class="py-2 px-3 my-2 bg-blue-400 text-white rounded w-full hover:bg-blue-500">
+            <p class="text-lg font-bold mb-10">
+                Click below to confirm email address.
+            </p>            
+            <button type="submit" class="w-full block border-2 text-1xl p-3 hover:cursor-pointer hover:bg-black hover:text-white transition">
                 Confirm Email
             </button>
         </form>
-    {% else %}
-        <h2 class="text-2xl mb-8 text-center">
-            Email Unavailable
-        </h2>
-        <p>
+        {% else %}
+        <p class="text-lg font-bold mb-10">
             Unable to confirm email address, because it is associated with another account.
         </p>
-    {% endif %}
-{% else %}
-    <h2 class="text-2xl mb-8 text-center">
-        Expired Link
-    </h2>
-    <p>
-        This confirmation link has expired
+        <a href="{% url 'home' %}" class="w-full block border-2 text-1xl p-3 hover:cursor-pointer hover:bg-black hover:text-white transition">
+            Back
+        </a>        
+        {% endif %}
+    {% else %}
+    <p class="text-lg font-bold mb-10">
+        This confirmation link has expired.
     </p>
-{% endif %}
+    <a href="{% url 'home' %}" class="w-full block border-2 text-1xl p-3 hover:cursor-pointer hover:bg-black hover:text-white transition">
+        Back
+    </a>    
+    {% endif %}   
+</div>
 {% endblock content %}

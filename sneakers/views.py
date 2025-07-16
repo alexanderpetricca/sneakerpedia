@@ -1,29 +1,33 @@
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Prefetch
-from django.views.decorators.cache import cache_page
+from django.core.cache import cache
 
 from sneakers.models import Brand, Sneaker
 from sneakers.filters import SneakerFilter
 from sneakers.utils import get_active_filters
 
 
-@cache_page(60 * 60)
 def home_page_view(request):
     """
     Fetches brands and their associated sneakers, grouped and sorted.
     """
 
-    brands_with_sneakers = Brand.objects.filter(
-        sneaker__isnull=False
-    ).distinct().order_by('name')
+    brands_with_sneakers = cache.get('brands_with_sneakers')
+    
+    if not brands_with_sneakers:
+        brands_with_sneakers = Brand.objects.filter(
+            sneaker__isnull=False
+        ).distinct().order_by('name')
 
-    brands_with_sneakers = brands_with_sneakers.prefetch_related(
-        Prefetch(
-            'sneaker_set',
-            queryset=Sneaker.objects.order_by('name'),
-            to_attr='sneakers',
+        brands_with_sneakers = brands_with_sneakers.prefetch_related(
+            Prefetch(
+                'sneaker_set',
+                queryset=Sneaker.objects.order_by('name'),
+                to_attr='sneakers',
+            )
         )
-    )
+        timeout_period = 60*60
+        cache.set('brands_with_sneakers', brands_with_sneakers, timeout=timeout_period)    
 
     context = {
         'brands': brands_with_sneakers,
@@ -57,7 +61,7 @@ def detail_view(request, pk):
     Fetches specific sneaker and renders detail page.
     """
     
-    sneaker = get_object_or_404(Sneaker, id=pk)
+    sneaker = get_object_or_404(Sneaker.objects.select_related('brand'), id=pk)
 
     context = {
         'sneaker': sneaker,
