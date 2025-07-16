@@ -10,6 +10,10 @@ Sneakerpedia is a portfolio project built using a 'traditional' Django stack. It
 - Tailwind
 - Alpine JS
 
+## API
+
+The project includes an API, that allows access to sneaker data via a GET request. The docs can be viewed at http://127.0.0.1:8000/api/schema/redoc/ when the project is running.
+
 
 ## Local Development Setup
 
