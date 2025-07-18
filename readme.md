@@ -4,6 +4,10 @@
 
 Sneakerpedia is a portfolio project built using a 'traditional' Django stack. It serves as a web application to archive and display sneakers and their related information, such as brand, designer, and release year. The project demonstrates core Django skills, including models, views, templates, user authentication, API design and testing.
 
+![Screenshot of Homepage](./.github/images/snp_home-min.png)
+
+![Screenshot of Detail Page](./.github/images/snp_detail-min.png)
+
 ## Stack
 - Django
 - Django Rest Framework
@@ -69,9 +73,3 @@ To run the test suite:
 ```shell
 $ docker-compose exec web python manage.py test
 ```
-
-## Screenshots
-
-![Screenshot of Homepage](./.github/images/snp_home-min.png)
-
-![Screenshot of Detail Page](./.github/images/snp_detail-min.png)
