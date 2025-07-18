@@ -21,39 +21,37 @@ The project includes an API, that allows access to sneaker data via a GET reques
 
 ## Local Development Setup
 
-1.  Clone the repo, and cd into it:
-
+1.  Clone the repository and navigate into the directory:
     ```shell
-    $ git clone <repo-url>
-    $ cd <path/to/repo>
+    git clone [https://github.com/alexanderpetricca/sneakerpedia](https://github.com/alexanderpetricca/sneakerpedia)
+    cd sneakerpedia
     ```
 
-2.  Ensure you have docker installed, and that it is running.
-3.  Add environment variables for the following:
-    * `SECRET_KEY` (Secret key used by Django)
-    * `DJANGO_DEBUG` (set to `True` for development)
+2.  Ensure Docker is installed and running on your system.
 
-    For production, you'll also want to add the relevant variables for your database and email provider, which are used when `DEBUG` is set to `False` (see settings).
+3.  Create a `.env` file in the project root to store your environment variables. For development, add the following:
+    ```
+    SECRET_KEY=your_secret_key_here
+    DJANGO_DEBUG=True
+    ```
+    For production, `DEBUG` should be set to `False`, and you will need to add variables for your database and email provider (see `settings.py` for details).
 
-4.  Build and start up the local server:
-
+4.  Build the Docker image and start the containers:
     ```shell
-    $ docker-compose up --build
+    docker-compose up --build
     ```
 
-5.  Apply migrations to the database:
-
+5.  In a separate terminal, apply migrations to the database:
     ```shell
-    $ docker-compose exec web python manage.py migrate
+    docker-compose exec web python manage.py migrate
     ```
 
-6.  Create a superuser:
-
+6.  Create a superuser to access the admin panel:
     ```shell
-    $ docker-compose exec web python manage.py createsuperuser
+    docker-compose exec web python manage.py createsuperuser
     ```
 
-7.  Navigate to http://127.0.0.1:8000/ in your browser.
+7.  Navigate to `http://127.0.0.1:8000/` in your browser.
 
 ## Seed Data
 
